@@ -4,7 +4,7 @@ const cookie_parser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const errMiddleware = require('./middleware/error')
+const errMiddleware = require('./error')
 
 
 
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 
 //Route Imports
-const userRoute = require('./routes/userRoute')
+const userRoute = require('./userRoute')
 
 app.use('/api',userRoute)
 
